@@ -9,5 +9,6 @@ public class HelloSpringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HelloSpringApplication.class, args);
 	}
+	// 개발 내용 추가
 
 }
