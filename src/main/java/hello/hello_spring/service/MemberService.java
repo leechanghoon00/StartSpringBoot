@@ -1,21 +1,23 @@
 package hello.hello_spring.service;
 
 import hello.hello_spring.domain.Member;
+import hello.hello_spring.repository.JdbcMemberRepository;
 import hello.hello_spring.repository.MemberRepository;
-import hello.hello_spring.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-
-public class MemberSerivce {
+@Transactional
+public class MemberService {
 
 
     private  final MemberRepository memberRepository;
 
-    public MemberSerivce(MemberRepository memberRepository) {// 직접 생성하는게 아니라 외부에서 넣어주도록 설정
+    public MemberService(MemberRepository memberRepository)
+
+
+    {// 직접 생성하는게 아니라 외부에서 넣어주도록 설정
         this.memberRepository = memberRepository;
     }
 
